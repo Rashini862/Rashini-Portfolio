@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashini Lakhika - UI/UX Designer & Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2a4e3e;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #f8b135;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #2a4e3e;
+        }
+        
+        .logo-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #f8b135;
+        }
+        
+        .contact-btn {
+            background-color: white;
+            color: #2a4e3e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background-color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: white;
+            color: rgba(15, 1, 1, 0.871);
+            padding: 8rem 5% 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            color: gr;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #f8b135;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #2a4e3e;
+            color:white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e6a22e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image {
+            position: relative;
+            max-width: 500px;
+        }
+        
+        /* Floating Cards */
+.floating-card {
+  position: absolute;
+  width: 210px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  line-height: 1.4;
+}
+        
+        .card-1 {
+  background-color: #1a382a;
+  top: 70px;
+  left: 300px;
+  width: 170px;
+  height: 170px;
+}
+        
+        .card-2 {
+  background-color: #f8b135;
+  color: #1a382a;
+  bottom: 50px;
+  left: 300px;
+  width: 170px;
+  height: 170px;
+}
+
+        
+        /* Card Text */
+.floating-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+        
+        .floating-card p {
+  font-size: 16px;
+}
+
+        .profile-container1 {
+  width: 500px;
+  height: 500px;
+  background-color: #fdf2d7;
+  border: 3px solid #f8b135;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: visible; /* allow image to go outside */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1; /* keep behind image */
+}
+
+
+.profile-image1 {
+  position: absolute;
+  top: 30px; /* image moves up */
+  left: -90px; /* image moves slightly left */
+  z-index: 3; /* image in front */
+  width: 350px;
+  height: 470px;
+}
+
+        /* Profile Image (inner part) */
+.profile-image1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 1.9rem 0;
+            background-color: #f8b135;
+            height: 2px;
+        }
+        
+        .portfolio-items {
+            display: flex;
+            color: #2a4e3e;
+            font-size: 1rem;
+            font-weight: bold;
+            justify-content: center;
+            gap: 10rem;
+            flex-wrap: wrap;
+            margin-top: -1rem;
+        }
+        
+        
+        
+        /* About Section */
+        .about {
+            padding: 5rem 5%;
+            background-color: #2a4e3e;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+            max-width: 400px;
+        }
+        
+        .profile-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(248, 181, 53, 0.2);
+    border: 4px solid #f8b135;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+        
+        .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #1a382a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden; /* Add this */
+    position: relative; /* Add this */
+    z-index: 2; /* Bring to front */
+}
+
+/* To use your actual image */
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes rectangular image fit circle */
+    border-radius: 50%;
+}
+
+        
+        .skill-tag {
+            position: absolute;
+            background-color: #f8b135;
+            color: #2a4e3e;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 10; /* Add this to bring to front */
+        }
+        
+        .tag-1 {
+            top: 10%;
+            right: 10%;
+        }
+        
+        .tag-2 {
+            top: 40%;
+            right: 0;
+        }
+        
+        .tag-3 {
+            bottom: 20%;
+            right: 15%;
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-content.section-badge {
+            color: #f8b135;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: left !important;
+    margin-left: 0 !important;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title span {
+            color: #f8b135;
+        }
+        
+        .about-text {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f8b135;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+
+        .btn {
+    background-color: #f8b135;
+    color: #2a4e3e;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2a4e3e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+        
+        /* Tools Section */
+        .tools {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header .section-badge {
+            color: #f8b135;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #2a4e3e;
+            margin-bottom: 1rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f7f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: #2a4e3e;
+        }
+        
+        .tool-percentage {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2a4e3e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-name {
+            font-weight: 500;
+            color: #4a5568;
+        }
+        
+        /* Education & Experience */
+        
+        .timeline {
+            padding: 5rem 5%;
+            background-color: #2a4e3e;
+            color: white;
+            position: relative;
+        }
+        
+        .section-badge {
+    color: #f8b135;
+    font-weight: 500;
+    margin-bottom: 5rem; /* Even more space */
+    margin-top: -1rem;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-bg-text {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    top: 20%; /* Moved further down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    white-space: nowrap;
+}
+        
+        .timeline-content {
+            display: flex;
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline-column {
+        
+            width: 600px;
+            background-color: rgba(255,255,255,0.9);
+            color: #2a4e3e;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 4rem; /* Push columns down */
+            justify-content: flex-start; /* Left align */
+    margin-right: auto; /* Push to left */
+        }
+        
+        .timeline-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Push image to right */
+    gap: 10px;
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+    order: 2; /* Ensure image is on right side */
+}
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #f8b135;
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        
+        .timeline-subtitle {
+            color: #4a5568;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 5rem 5%;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2a4e3e;
+        }
+        
+        .cta h2 span {
+            color: #f8b135;
+        }
+        
+        .cta p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #4a5568;
+        }
+        
+        /* Skills Marquee */
+        .skills-marquee {
+            background-color: #f8b135;
+            padding: 1.0rem 0;
+            overflow: hidden;
+        }
+        
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .skill-tag-marquee {
+            background-color: #2a4e3e;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            margin: 0 1rem;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            background-color: #2a4e3e;
+            color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 4rem;
+            
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info h2 span {
+            color: #f8b135;
+        }
+        
+        .contact-info p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(248, 181, 53, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f8b135;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.3rem;
+            color: #f8b135;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #f8b135;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: white;
+            color: #2a4e3e;
+            padding: 3rem 5% 1rem;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: #2a4e3e;
+            border-radius: 50%;
+            display: flex;
+            gap: 15px;
+    margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background-color: #e6a22e;
+            transform: translateY(-3px);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #4a5568;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #f8b135;
+        }
+        
+        .contact-list {
+            list-style: none;
+        }
+        
+        .contact-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .newsletter {
+    display: flex;
+    position: relative; /* For absolute positioning */
+}
+
+.newsletter input {
+    flex: 1;
+    height: 50px;
+    padding: 0 20px;
+    background-color: var(--light);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    color: var(--dark);
+    font-size: 16px;
+    padding-right: 60px; /* Make space for button */
+}
+
+.newsletter button {
+    position: absolute; /* Position absolutely */
+    right: 0; /* Place at right */
+    top: 0; /* Align to top */
+    width: 50px;
+    height: 50px;
+    background-color: #2a4e3e;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: #e6a22e;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter button:hover {
+    background-color: #e6a22e;
+    color: black;
+}
+        
+        .footer-bottom {
+    background-color: #2a4e3e;
+    border-top: 1px solid #1a382a;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 1rem 5%; /* Add left-right padding */
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    box-sizing: border-box;
+    
+}
+
+.copyright {
+    color: white;
+    order: 1;
+    margin: 0; /* Remove any margins */
+    /* It will automatically go to left */
+}
+
+.footer-links-bottom {
+    display: flex;
+    gap: 2.5rem;
+    order: 2;
+    /* This will automatically go to right */
+}
+
+.footer-links-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links-bottom a:hover {
+    color: #f8b135;
+}
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 6rem;
+            }
+            
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+            
+            .about {
+                flex-direction: column;
+            }
+            
+            .timeline-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 7rem 5% 3rem;
+            }
+            
+            .floating-card {
+                position: relative;
+                margin: 1rem 0;
+            }
+            
+            .hero-image {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-circle">R</div>
+            <div class="logo-text">Rashini</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html" class="contact-btn">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>✦</span>
+                <span>Hello There!</span>
+                <span>✦</span>
+            </div>
+            <h1>I'm <span>Rashini Lakshika</span></h1>
+            <h2>UI/UX Designer & Data Analyst</h2>
+            <p>I design digital experiences and analyze data to turn ideas into solutions.</p>
+            <a href="project.html" class="btn">View My Design <span>→</span></a>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card card-1">
+                <h3>UI/UX Design</h3>
+                <p>Creating beautiful, functional interfaces for exceptional user experiences</p>
+            </div>
+            <div class="profile-container1">
+                <div class="profile-image1"><img src="Image folder/profile.png"></div>
+            </div>
+            <div class="floating-card card-2">
+                <h3>Data Analysis</h3>
+                <p>Transforming complex data into actionable insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>App Design</span>
+            </div>
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>Website Design</span>
+            </div>
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>Dashboard</span>
+            </div>
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>Wireframe</span>
+            </div>
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>Prototype</span>
+            </div>
+            <div class="portfolio-item">
+                <span>✦</span>
+                <span>Analytics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <div class="profile-container">
+                <div class="profile-image"><img src="Image folder/hand image.png"></div>
+            </div>
+            <div class="skill-tag tag-1">UI Design</div>
+            <div class="skill-tag tag-2">UX Research</div>
+            <div class="skill-tag tag-3">Data Analysis</div>
+        </div>
+        <div class="about-content">
+            <span class="section-badge" style="text-align: left !important; display: block !important; color: #f8b135 !important; margin: 0 !important; padding: 0 !important; float: left !important; margin-top: -3rem !important;">— About Me</span>
+            <h2 class="section-title">Who is <span>Rashini Lakshika</span>?</h2>
+            <p class="about-text">
+                Hi, I'm Rashini Lakshika! My profession lies in both Analytics and UI/UX design and also data has become my passion. Currently working as a trainee at GSS Colombo, and growing my skills every day.
+            </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">02+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">01+</div>
+                    <div class="stat-label">Design Companies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+            <a href="Image folder/Rashini Lakshika CV.pdf" class="btn">Download CV <span>↓</span></a>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="section-header">
+            <span class="section-badge">— My Favorite Tools</span>
+            <h2>My Creative & Analytical Tools</h2>
+        </div>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/Jira.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">98%</div>
+                <div class="tool-name">Jira</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/Frame.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">92%</div>
+                <div class="tool-name">Power BI</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/figma.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">85%</div>
+                <div class="tool-name">Figma</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/canva.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">85%</div>
+                <div class="tool-name">Canva</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/vscode.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">85%</div>
+                <div class="tool-name">VS Code</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <img src="Image folder/tableau.png" alt="Jira">
+                </div>
+                <div class="tool-percentage">85%</div>
+                <div class="tool-name">Tableau</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section class="timeline">
+        <div class="timeline-bg-text">Academic and Professional Journey</div>
+        <span class="section-badge">— Education</span>
+        <div class="timeline-content">
+            <div class="timeline-column">
+                <h3><img src="Image folder/education.png" class="education-icon">Education</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024-2026</div>
+                    <div class="timeline-title">Easton Campus</div>
+                    <div class="timeline-subtitle">BIT</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023-2024</div>
+                    <div class="timeline-title">University of Colombo</div>
+                    <div class="timeline-subtitle">Foundation</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2011-2022</div>
+                    <div class="timeline-title">Newstead Girls' College</div>
+                    <div class="timeline-subtitle">O/L - 7As 2B</div>
+                </div>
+            </div>
+            <div class="timeline-column">
+                <h3><img src="Image folder/work.png" class="education-icon"> Work Experience</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-Now</div>
+                    <div class="timeline-title">GSS Colombo</div>
+                    <div class="timeline-subtitle">Data Analyst (NOW)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025-2025 May</div>
+                    <div class="timeline-title">GSS Colombo</div>
+                    <div class="timeline-subtitle">Trainee Data Analyst</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024-2024</div>
+                    <div class="timeline-title">GSS Colombo</div>
+                    <div class="timeline-subtitle">QAT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Let's Bringing <span>Imagination</span> to <span>Life</span></h2>
+        <p>Ready to start your next project?</p>
+        <a href="contact.html" class="btn">Contact <span>→</span></a>
+    </section>
+
+    <!-- Skills Marquee -->
+    <section class="skills-marquee">
+        <div class="marquee-content">
+            <div class="skill-tag-marquee">Digital Design</div>
+            <div class="skill-tag-marquee">Mobile App Design</div>
+            <div class="skill-tag-marquee">Website Design</div>
+            <div class="skill-tag-marquee">UI/UX Design</div>
+            <div class="skill-tag-marquee">Dashboard</div>
+            <div class="skill-tag-marquee">Wireframe</div>
+            <div class="skill-tag-marquee">Prototyping</div>
+            <div class="skill-tag-marquee">Digital Design</div>
+            <div class="skill-tag-marquee">Mobile App Design</div>
+            <div class="skill-tag-marquee">Website Design</div>
+            <div class="skill-tag-marquee">UI/UX Design</div>
+            <div class="skill-tag-marquee">Dashboard</div>
+            <div class="skill-tag-marquee">Wireframe</div>
+            <div class="skill-tag-marquee">Prototyping</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <span class="section-badge" style="text-align: left !important; display: block !important; color: #f8b135 !important; margin: 0 !important; padding: 0 !important; float: left !important; width: 100% !important; margin-top: -30px !important;">— Contact Us</span>
+                <h2>Let's <span>Talk</span> for</h2>
+                <p>Feel free to say hi or drop me a message anytime!</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Me</h4>
+                            <p>+94 78 7111329</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Me</h4>
+                            <p>rashilakshika86@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>rashini-lakshika</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>No.145 Church Road, Negombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+    <form action="https://formspree.io/f/xldpvgor" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label for="message">Your Message/Comments</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send <span>→</span></button>
+    </form>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <div class="logo-circle">R</div>
+                    <div class="logo-text">Rashini</div>
+                </div>
+                <p>I'm always happy to connect. Let's stay in touch and create something nice together.</p>
+                <div class="social-links">
+                    <div class="social-links">
+                        <a href="www.linkedin.com/in/rashini-lakshika-76640b320" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/lakshika_rashini/?next=%2F" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Rashini862" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.tiktok.com/@rashini.lakshika1?lang=en-GB" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone"></i> +94787111329</li>
+                    <li><i class="fas fa-envelope"></i> rashilakshika86@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> No 145, Kongodamulla, Katana</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+    <h3>Get the latest information</h3>
+    <div class="newsletter">
+        <form action="https://formspree.io/f/movkbjpe" method="POST">
+            <input type="email" name="email" placeholder="Email address" required>
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                Copyright 2026 <span>Rashini</span>. All Rights Reserved.
+            </div>
+            <div class="footer-links-bottom">
+                <a href="#">User Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
